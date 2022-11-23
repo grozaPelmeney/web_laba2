@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/header.css" />
+    <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+    <script src="../assets/js/admin.js"></script>
+
+
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap-grid.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h2 id="catalog">
+        Каталог <br />
+        спецтехники
+      </h2>
+      <a href="/admin">
+        <button>Добавить</button>
+      </a>
+    </header>
+    <div class="content-wrapper">
+      <main class="container">
+        <div class="row">
+          <div class="col-lg-6 col-xs-12 photo">
+            <h2>Изображение</h2>
+            <div class="content">
+              <img id="loaded-photo" src="" alt="">
+              <input type="file" multiple accept="image/jpeg" hidden id="input-photo">
+              <button id="button-photo">Добавить изображение</button>
+            </div>
+          </div>
+          <div class="col-lg-6 col-xs-12 description ">
+            <h2>Описание</h2>
+            <textarea id="description"
+              placeholder="Введите описание техники"
+              rows="10"
+            ></textarea>
+          </div>
+        </div>
+        <div class="row characteristics">
+          <div class="col-12">
+            <div class="wrapper">
+              <div class="input-row">
+                <span>База</span>
+                <select id="base-select">
+
+                </select>
+              </div>
+              <div class="input-row">
+                <span>Надстройка</span>
+                <select id="feature-select">
+
+                </select>
+              </div>
+              <div class="input-row">
+                <span>Название</span>
+                <input type="text" placeholder="Введите название" />
+              </div>
+              <div class="input-row">
+                <span>Объем двигателя</span>
+                <input type="text" placeholder="Введите объем двигателя" />
+              </div>
+              <div class="input-row">
+                <span>Мощность</span>
+                <input type="text" placeholder="Введите мощность" />
+              </div>
+              <div class="input-row">
+                <span>Крутящий момент</span>
+                <input type="text" placeholder="Введите крутящий момент" />
+              </div>
+              <div class="input-row">
+                <span>Топливо</span>
+                <input type="text" placeholder="Введите топливо" />
+              </div>
+              <div class="input-row">
+                <span>Шины</span>
+                <input type="text" placeholder="Введите шины" />
+              </div>
+              <div class="input-row">
+                <span>Масса</span>
+                <input type="text" placeholder="Введите массу" />
+              </div>
+              <div class="input-row">
+                <span>Габаритные размеры</span>
+                <input type="text" placeholder="Введите размеры" />
+              </div>
+              <div class="input-row">
+                <span>Объем топливного бака</span>
+                <input type="text" placeholder="Введите объем" />
+              </div>
+              <button class="btn-save" id="button-send-info">Добавить</button>
+            </div>
+          </div>
+          <div class="col-12 mt-5">
+            <div class="wrapper new">
+              <h2>Добавить базу</h2>
+              <div class="new-row">
+                <input id="base-input" type="text" placeholder="Введите название" />
+                <button class="btn-save" id="button-add-base">Добавить</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 mt-5">
+            <div class="wrapper new">
+              <h2>Добавить надстройку</h2>
+              <div class="new-row">
+                <input id="feature-input" type="text" placeholder="Введите название" />
+                <button class="btn-save" id="button-add-feature">Добавить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="footer-content">
+          <h2>8 800 228 13 37</h2>
+          <p>пн-пт: с 9:00 до 18:00</p>
+          <p>633530, Россия, Новосибирская область, Черепаново-ленд</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

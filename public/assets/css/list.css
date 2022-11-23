@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+button{
+    transition: 0.15s ease-in-out;
+}
+button:hover{
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+
+}
+.content-wrapper{
+    display: flex;
+    flex-direction: column;
+    
+}
+.content{
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.content .item{
+    width: calc(25% - 17px);
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 20px;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 30px;
+    text-align: center
+
+}
+.content .item img{
+    border-radius: 20px 20px 0px 0px;
+    width: 100%;
+}
+.content .item p{
+    padding: 0 15px;
+    margin-top: 10px;
+   flex: 1 0 auto;
+}
+@media screen and (max-width: 1100px){
+    .content .item{
+        width: calc(33.33% - 17px);
+    }
+    
+}
+
+@media screen and (max-width: 854px){
+    .content .item{
+        width: calc(50% - 14px);
+    }
+    
+}
+@media screen and (max-width: 585px){
+    .content .item{
+        width: 100%;
+    }
+    
+}
+.content .item a{
+    margin-top: 20px;
+    width: 50%;
+}
+.content .item button{
+    cursor: pointer;
+    background: white;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.4);
+    width: 100%;
+}
+main{
+    min-height: calc(90vh - 200px);
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 80%;
+    padding: 0 10%;
+    flex: 1 0 auto;
+}
+
+.searchbar{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.searchbar input{
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    flex: 1;
+}
+.searchbar button{
+    background: white;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 15px ;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+
+    border-radius: 10px
+
+}

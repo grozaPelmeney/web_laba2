@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.content-wrapper{
+    display: flex;
+    flex-direction: column;
+    
+}
+.block{
+    border: 1px solid black;
+}
+main{
+    min-height: calc(90vh - 200px);
+    margin: 0 auto;
+    margin-top: 30px;
+    max-width: 70%;
+    flex: 1 0 auto;
+}
+@media screen and (max-width: 575px) {
+    main{
+        max-width: 90%;
+    }
+}
+
+.photo .content{
+    text-align: center;
+}
+.photo img{
+    width: 100%;
+}
+.btn-del{
+    cursor: pointer;
+    background: rgb(252, 48, 48);
+    border: 1px solid rgb(124, 26, 26);
+    border-radius: 10px;
+    color: white;
+    padding: 10px 15px
+}
+.btn-primary{
+    cursor: pointer;
+    background: rgb(12, 20, 235);
+    border: 1px solid rgb(2, 4, 59);
+    border-radius: 10px;
+    color: white;
+    padding: 10px 15px
+}
+.description textarea{
+    font-size: 18px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+.characteristics{
+    margin-top: 20px !important;
+}
+.characteristics .wrapper{
+    margin: 0 auto;
+    width: 70%;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+@media screen and (max-width: 991px) {
+    .characteristics .wrapper{
+
+        width: 100%;
+    }
+}
+.input-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.input-row span{
+    flex: 0.6;
+}
+.input-row select, input{
+    flex: 1;
+    padding: 10px 10px;
+    border: 1px solid rgba(0,0 ,0 , 0.4);
+    border-radius: 10px;
+}
+.btn-save{
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background: white;
+    border: 1px solid rgba(0,0 ,0 , 0.4);
+}
+.wrapper button{
+    margin: 0 auto;
+    width: 70%;
+}
