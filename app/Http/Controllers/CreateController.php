@@ -61,17 +61,17 @@ class CreateController extends Controller
         $feature = new feature();
         $feature->name = $request->input('name');
         $feature->save();
-        return feature::all();
+        return response()->json($feature,200);
+        
     }
 
     public function createBase(HttpRequest $request)
     {
-        $feature = new base();
-        $feature->name = $request->input('name');
-        $feature->save();
-        return base::all();
+        $base = new base();
+        $base->name = $request->input('name');
+        $base->save();
+        return response()->json($base,200);
 
-        return response()->json("",200);
     }
     
     

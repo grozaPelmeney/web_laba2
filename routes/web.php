@@ -29,10 +29,11 @@ $router->post('/create_base',"CreateController@createBase");
 
 $router->delete('/delete_car',"DeleteController@deleteCar");
 
+$router->post('/register',"LoginController@registr");
+$router->post('/login',"LoginController@login");
 
 
-
-//pages
+//pages ,['middleware' => ['auth']
 $router->get('/admin', function () use ($router) {
     return view('pages/admin');
 });
@@ -45,4 +46,12 @@ $router->get('/list', function () use ($router) {
 });
 $router->get('/redact/{id}', function () use ($router) {
     return view('pages/redact');
+});
+
+$router->get('/', function () use ($router) {
+    return view('pages/login');
+});
+
+$router->get('/register', function () use ($router) {
+    return view('pages/register');
 });

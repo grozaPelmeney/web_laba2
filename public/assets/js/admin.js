@@ -145,7 +145,10 @@ document.getElementById("button-send-info").onclick = async() =>{
 
   console.log(newCar);
 
-  let response = await fetch(`${ROOT_URL}create_car`, {
+
+
+ 
+let response = await fetch(`${ROOT_URL}create_car`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json;charset=utf-8',
@@ -184,14 +187,35 @@ document.getElementById("button-add-base").onclick = async() =>{
     return 0;
   }
 
-  let response = await fetch(`${ROOT_URL}create_base`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json;charset=utf-8',
-    },
-    body: JSON.stringify(new_base),
-  });
-  console.log(response.json()); 
+
+  let request  = new XMLHttpRequest();
+
+  request.onreadystatechange = function()
+  {
+    console.log(this.readyState);
+    if(this.readyState == 4)
+    {
+      let base = JSON.parse(this.responseText);
+      let baseFeature =  document.getElementById("base-select");
+      let option = document.createElement("option");
+      option.id = base.id
+      option.textContent = base.name;
+      baseFeature.appendChild(option);
+    }
+  }
+
+  request.open("POST",`${ROOT_URL}create_base`,true);
+  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  request.send(`name=${name}`);
+
+  // let response = await fetch(`${ROOT_URL}create_base`, {
+  //   method: 'POST',
+  //   headers: {
+  //     'Content-Type': 'application/json;charset=utf-8',
+  //   },
+  //   body: JSON.stringify(new_base),
+  // });
+  // console.log(response.responseText); 
  
 }
 
@@ -220,19 +244,40 @@ document.getElementById("button-add-base").onclick = async() =>{
   }
 
 
+  
+  let request  = new XMLHttpRequest();
+
+  request.onreadystatechange = function()
+  {
+    console.log(this.readyState);
+    if(this.readyState == 4)
+    {
+      let feature = JSON.parse(this.responseText);
+      let Feature =  document.getElementById("feature-select");
+      let option = document.createElement("option");
+      option.id = feature.id
+      option.textContent = feature.name;
+      Feature.appendChild(option);
+    }
+  }
+
+  request.open("POST",`${ROOT_URL}create_feature`,true);
+  request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  request.send(`name=${name}`);
 
 
 
 
 
-  let response = await fetch(`${ROOT_URL}create_feature`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json;charset=utf-8',
-    },
-    body: JSON.stringify(new_feature),
-  });
-  console.log(response.json()); 
+
+  // let response = await fetch(`${ROOT_URL}create_feature`, {
+  //   method: 'POST',
+  //   headers: {
+  //     'Content-Type': 'application/json;charset=utf-8',
+  //   },
+  //   body: JSON.stringify(new_feature),
+  // });
+  // console.log(response.json()); 
  
 }
 
