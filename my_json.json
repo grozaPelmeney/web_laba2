@@ -1,14 +1,6 @@
 {
     "version": 8,
     "name": "[DELETE_ME] Satellite Streets Offline Test",
-    "fog": {
-        "range": [0.8, 8],
-        "color": "#dc9f9f",
-        "horizon-blend": 0.5,
-        "high-color": "#245bde",
-        "space-color": "#000000",
-        "star-intensity": 0.15
-    },
     "metadata": {
         "mapbox:type": "default",
         "mapbox:origin": "satellite-streets-v11",
@@ -4893,6 +4885,14 @@
             }
         }
     ],
+    "fog": {
+        "range": [0.8, 8],
+        "color": "#dc9f9f",
+        "horizon-blend": 0.5,
+        "high-color": "#245bde",
+        "space-color": "#000000",
+        "star-intensity": 0.15
+    },
     "created": "2022-10-20T09:40:58.353Z",
     "modified": "2022-10-20T09:41:20.937Z",
     "id": "cl9gvi3ir00ai15nlwmi6uqop",
