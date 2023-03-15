@@ -4887,7 +4887,7 @@
     ],
     "fog": {
         "range": [0.8, 8],
-        "color": "#dc9f9f",
+        "color": "#000000",
         "horizon-blend": 0.5,
         "high-color": "#245bde",
         "space-color": "#000000",
