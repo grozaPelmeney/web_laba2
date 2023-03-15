@@ -8,7 +8,7 @@
         "high-color": "#245bde",
         "space-color": "#000000",
         "star-intensity": 0.15
-    }
+    },
     "metadata": {
         "mapbox:type": "default",
         "mapbox:origin": "satellite-streets-v11",
