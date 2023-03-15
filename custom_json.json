@@ -1,0 +1,49 @@
+{
+"version": 8,
+"name": "Mapbox Streets",
+"sprite": "mapbox://sprites/mapbox/streets-v8",
+"glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
+"sources": {
+  "mapbox-streets": {
+    "type": "vector",
+    "url": "mapbox://mapbox.mapbox-streets-v8"
+  }
+},
+"layers": [
+  {
+    "id": "water",
+    "source": "mapbox-streets",
+    "source-layer": "water",
+    "type": "fill",
+    "paint": {
+      "fill-color": "#00ffff"
+    }
+  }
+],
+"glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
+"light": {
+  "anchor": "viewport",
+  "color": "white",
+  "intensity": 0.4
+},
+"fog": {
+  "range": [0.8, 8],
+  "color": "#ff0000",
+  "horizon-blend": 0.5,
+  "high-color": "#00ff00",
+  "space-color": "#0000ff",
+  "star-intensity": 0.15
+},
+"projection": {
+  "name": "albers",
+  "center": [
+    -154,
+    50
+  ],
+  "parallels": [
+    55,
+    65
+  ]
+},
+"sprite": "mapbox://sprites/mapbox/bright-v8"
+}
